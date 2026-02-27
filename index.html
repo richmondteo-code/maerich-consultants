@@ -13,8 +13,8 @@
 
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
-            color: #fff;
+            background: #0a0a0a;
+            color: #e0e0e0;
             padding: 20px;
         }
 
@@ -25,12 +25,13 @@
 
         .header h1 {
             font-size: 32px;
-            color: #00ff88;
+            color: #ffffff;
             margin-bottom: 10px;
+            font-weight: 700;
         }
 
         .header .subtitle {
-            color: #a0a0a0;
+            color: #9a9a9a;
             font-size: 16px;
         }
 
@@ -42,8 +43,8 @@
         }
 
         .stat-card {
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(0, 255, 136, 0.3);
+            background: #1a1a1a;
+            border: 1px solid #2a2a2a;
             border-radius: 12px;
             padding: 20px;
             text-align: center;
@@ -51,12 +52,12 @@
 
         .stat-value {
             font-size: 36px;
-            color: #00ff88;
+            color: #ffffff;
             font-weight: 700;
         }
 
         .stat-label {
-            color: #a0a0a0;
+            color: #9a9a9a;
             font-size: 14px;
             margin-top: 5px;
         }
@@ -72,31 +73,36 @@
             flex: 1;
             min-width: 250px;
             padding: 12px 20px;
-            background: rgba(255, 255, 255, 0.1);
-            border: 1px solid rgba(0, 255, 136, 0.3);
+            background: #1a1a1a;
+            border: 1px solid #2a2a2a;
             border-radius: 8px;
-            color: #fff;
+            color: #e0e0e0;
             font-size: 14px;
         }
 
         .search-box::placeholder {
-            color: #a0a0a0;
+            color: #6a6a6a;
         }
 
         .filter-select {
             padding: 12px 20px;
-            background: rgba(255, 255, 255, 0.1);
-            border: 1px solid rgba(0, 255, 136, 0.3);
+            background: #1a1a1a;
+            border: 1px solid #2a2a2a;
             border-radius: 8px;
-            color: #fff;
+            color: #e0e0e0;
             font-size: 14px;
             cursor: pointer;
         }
 
+        .filter-select option {
+            background: #1a1a1a;
+            color: #e0e0e0;
+        }
+
         .btn {
             padding: 12px 24px;
-            background: #00ff88;
-            color: #1a1a2e;
+            background: #ffffff;
+            color: #0a0a0a;
             border: none;
             border-radius: 8px;
             font-weight: 600;
@@ -105,7 +111,7 @@
         }
 
         .btn:hover {
-            background: #00cc6f;
+            background: #e0e0e0;
             transform: translateY(-2px);
         }
 
@@ -113,14 +119,14 @@
             display: flex;
             gap: 10px;
             margin-bottom: 20px;
-            border-bottom: 2px solid rgba(0, 255, 136, 0.3);
+            border-bottom: 2px solid #2a2a2a;
         }
 
         .tab {
             padding: 12px 24px;
             background: transparent;
             border: none;
-            color: #a0a0a0;
+            color: #9a9a9a;
             cursor: pointer;
             font-size: 14px;
             font-weight: 600;
@@ -129,13 +135,13 @@
         }
 
         .tab.active {
-            color: #00ff88;
-            border-bottom-color: #00ff88;
+            color: #ffffff;
+            border-bottom-color: #ffffff;
         }
 
         .table-container {
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(0, 255, 136, 0.3);
+            background: #1a1a1a;
+            border: 1px solid #2a2a2a;
             border-radius: 12px;
             overflow: hidden;
         }
@@ -146,14 +152,14 @@
         }
 
         thead {
-            background: rgba(0, 255, 136, 0.1);
+            background: #2a2a2a;
         }
 
         th {
             padding: 15px;
             text-align: left;
             font-weight: 600;
-            color: #00ff88;
+            color: #ffffff;
             font-size: 14px;
             text-transform: uppercase;
             letter-spacing: 0.5px;
@@ -161,32 +167,59 @@
 
         td {
             padding: 15px;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            border-bottom: 1px solid #2a2a2a;
             font-size: 14px;
         }
 
         tr:hover {
-            background: rgba(0, 255, 136, 0.05);
+            background: #1f1f1f;
         }
 
         .contact-link {
-            color: #00ff88;
+            color: #ffffff;
             text-decoration: none;
             transition: color 0.3s;
         }
 
         .contact-link:hover {
-            color: #00cc6f;
+            color: #e0e0e0;
             text-decoration: underline;
         }
 
         .region-badge {
             display: inline-block;
             padding: 4px 12px;
-            background: rgba(0, 255, 136, 0.2);
+            background: #2a2a2a;
             border-radius: 12px;
             font-size: 12px;
-            color: #00ff88;
+            color: #e0e0e0;
+        }
+
+        /* Editable select styling */
+        .editable-select {
+            padding: 6px 12px;
+            background: #2a2a2a;
+            border: 1px solid #3a3a3a;
+            border-radius: 6px;
+            color: #e0e0e0;
+            font-size: 14px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .editable-select:hover {
+            background: #3a3a3a;
+            border-color: #4a4a4a;
+        }
+
+        .editable-select:focus {
+            outline: none;
+            border-color: #ffffff;
+        }
+
+        .editable-select option {
+            background: #2a2a2a;
+            color: #e0e0e0;
         }
 
         .priority-high {
@@ -200,7 +233,16 @@
         }
 
         .priority-low {
-            color: #00ff88;
+            color: #4a9eff;
+        }
+
+        .status-contacted {
+            color: #44ff44;
+            font-weight: 600;
+        }
+
+        .status-not-contacted {
+            color: #9a9a9a;
         }
 
         .tab-content {
@@ -212,8 +254,12 @@
         }
 
         .export-btn {
-            background: rgba(0, 255, 136, 0.2);
-            color: #00ff88;
+            background: #2a2a2a;
+            color: #ffffff;
+        }
+
+        .export-btn:hover {
+            background: #3a3a3a;
         }
 
         @media (max-width: 768px) {
@@ -267,6 +313,13 @@
             <option value="High">High Priority</option>
             <option value="Medium">Medium Priority</option>
             <option value="Low">Low Priority</option>
+        </select>
+        <select class="filter-select" id="status-filter">
+            <option value="">All Status</option>
+            <option value="Not Contacted">Not Contacted</option>
+            <option value="Contacted">Contacted</option>
+            <option value="Meeting Scheduled">Meeting Scheduled</option>
+            <option value="Proposal Sent">Proposal Sent</option>
         </select>
         <button class="btn export-btn" onclick="exportToCSV()">📊 Export CSV</button>
         <button class="btn" onclick="loadData()">🔄 Refresh</button>
@@ -369,8 +422,30 @@
             const regions = new Set(consultantsData.map(c => c.region));
             document.getElementById('total-regions').textContent = regions.size;
             
-            const contacted = consultantsData.filter(c => c.status === 'Contacted').length;
+            const contacted = consultantsData.filter(c => c.status !== 'Not Contacted').length;
             document.getElementById('total-contacted').textContent = contacted;
+        }
+
+        async function updateConsultant(id, field, value) {
+            try {
+                const response = await fetch('/api/update-consultant', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ id, field, value })
+                });
+                
+                if (response.ok) {
+                    const consultant = consultantsData.find(c => c.id === id);
+                    if (consultant) {
+                        consultant[field] = value;
+                        updateStats();
+                    }
+                }
+            } catch (error) {
+                console.error('Error updating consultant:', error);
+            }
         }
 
         function renderConsultants() {
@@ -378,6 +453,7 @@
             const searchTerm = document.getElementById('search').value.toLowerCase();
             const regionFilter = document.getElementById('region-filter').value;
             const priorityFilter = document.getElementById('priority-filter').value;
+            const statusFilter = document.getElementById('status-filter').value;
             
             let filtered = consultantsData.filter(c => {
                 const matchesSearch = !searchTerm || 
@@ -386,8 +462,9 @@
                     c.projects.some(p => p.toLowerCase().includes(searchTerm));
                 const matchesRegion = !regionFilter || c.region === regionFilter;
                 const matchesPriority = !priorityFilter || c.priority === priorityFilter;
+                const matchesStatus = !statusFilter || c.status === statusFilter;
                 
-                return matchesSearch && matchesRegion && matchesPriority;
+                return matchesSearch && matchesRegion && matchesPriority && matchesStatus;
             });
             
             if (filtered.length === 0) {
@@ -405,8 +482,25 @@
                         ${c.email ? `<a href="mailto:${c.email}" class="contact-link">${c.email}</a><br>` : ''}
                         ${c.phone ? c.phone : ''}
                     </td>
-                    <td class="priority-${c.priority.toLowerCase()}">${c.priority}</td>
-                    <td>${c.status}</td>
+                    <td>
+                        <select class="editable-select priority-${c.priority.toLowerCase()}" 
+                                onchange="updateConsultant(${c.id}, 'priority', this.value); this.className='editable-select priority-' + this.value.toLowerCase();">
+                            <option value="High" ${c.priority === 'High' ? 'selected' : ''}>High</option>
+                            <option value="Medium" ${c.priority === 'Medium' ? 'selected' : ''}>Medium</option>
+                            <option value="Low" ${c.priority === 'Low' ? 'selected' : ''}>Low</option>
+                        </select>
+                    </td>
+                    <td>
+                        <select class="editable-select ${c.status === 'Not Contacted' ? 'status-not-contacted' : 'status-contacted'}" 
+                                onchange="updateConsultant(${c.id}, 'status', this.value); this.className='editable-select ' + (this.value === 'Not Contacted' ? 'status-not-contacted' : 'status-contacted');">
+                            <option value="Not Contacted" ${c.status === 'Not Contacted' ? 'selected' : ''}>Not Contacted</option>
+                            <option value="Contacted" ${c.status === 'Contacted' ? 'selected' : ''}>Contacted</option>
+                            <option value="Meeting Scheduled" ${c.status === 'Meeting Scheduled' ? 'selected' : ''}>Meeting Scheduled</option>
+                            <option value="Proposal Sent" ${c.status === 'Proposal Sent' ? 'selected' : ''}>Proposal Sent</option>
+                            <option value="Won" ${c.status === 'Won' ? 'selected' : ''}>Won</option>
+                            <option value="Lost" ${c.status === 'Lost' ? 'selected' : ''}>Lost</option>
+                        </select>
+                    </td>
                 </tr>
             `).join('');
         }
@@ -457,7 +551,7 @@
             
             if (currentTab === 'Lighting Consultants') {
                 data = consultantsData;
-                headers = ['Name', 'Company', 'Region', 'Email', 'Phone', 'Projects', 'Priority', 'Status'];
+                headers = ['Name', 'Company', 'Region', 'Email', 'Phone', 'Projects', 'Priority', 'Status', 'Notes'];
                 filename = 'maerich-consultants.csv';
                 
                 const csv = [
@@ -470,7 +564,8 @@
                         c.phone || '',
                         c.projects.join('; '),
                         c.priority,
-                        c.status
+                        c.status,
+                        c.notes || ''
                     ].map(field => `"${field}"`).join(','))
                 ].join('\n');
                 
@@ -491,6 +586,7 @@
         document.getElementById('search').addEventListener('input', renderConsultants);
         document.getElementById('region-filter').addEventListener('change', renderConsultants);
         document.getElementById('priority-filter').addEventListener('change', renderConsultants);
+        document.getElementById('status-filter').addEventListener('change', renderConsultants);
 
         // Load data on page load
         loadData();
