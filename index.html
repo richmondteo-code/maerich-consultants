@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Maerich Consultant Database</title>
+    <title>Grow by Maerich | True Sunlight Replacement for Indoor Biophilia</title>
+    <meta name="description" content="The only grow light system proven to replace sunlight for full-scale indoor tree and plant growth in luxury hospitality environments.">
     <style>
         * {
             margin: 0;
@@ -12,584 +13,656 @@
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background: #0a0a0a;
-            color: #e0e0e0;
-            padding: 20px;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #2c3e50;
+            background: #fff;
         }
 
-        .header {
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #0a4d2e 0%, #1a6d4a 100%);
+            color: white;
+            padding: 100px 20px;
             text-align: center;
-            margin-bottom: 30px;
-        }
-
-        .header h1 {
-            font-size: 32px;
-            color: #ffffff;
-            margin-bottom: 10px;
-            font-weight: 700;
-        }
-
-        .header .subtitle {
-            color: #9a9a9a;
-            font-size: 16px;
-        }
-
-        .stats {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-            margin-bottom: 30px;
-        }
-
-        .stat-card {
-            background: #1a1a1a;
-            border: 1px solid #2a2a2a;
-            border-radius: 12px;
-            padding: 20px;
-            text-align: center;
-        }
-
-        .stat-value {
-            font-size: 36px;
-            color: #ffffff;
-            font-weight: 700;
-        }
-
-        .stat-label {
-            color: #9a9a9a;
-            font-size: 14px;
-            margin-top: 5px;
-        }
-
-        .controls {
-            display: flex;
-            gap: 15px;
-            margin-bottom: 20px;
-            flex-wrap: wrap;
-        }
-
-        .search-box {
-            flex: 1;
-            min-width: 250px;
-            padding: 12px 20px;
-            background: #1a1a1a;
-            border: 1px solid #2a2a2a;
-            border-radius: 8px;
-            color: #e0e0e0;
-            font-size: 14px;
-        }
-
-        .search-box::placeholder {
-            color: #6a6a6a;
-        }
-
-        .filter-select {
-            padding: 12px 20px;
-            background: #1a1a1a;
-            border: 1px solid #2a2a2a;
-            border-radius: 8px;
-            color: #e0e0e0;
-            font-size: 14px;
-            cursor: pointer;
-        }
-
-        .filter-select option {
-            background: #1a1a1a;
-            color: #e0e0e0;
-        }
-
-        .btn {
-            padding: 12px 24px;
-            background: #ffffff;
-            color: #0a0a0a;
-            border: none;
-            border-radius: 8px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s;
-        }
-
-        .btn:hover {
-            background: #e0e0e0;
-            transform: translateY(-2px);
-        }
-
-        .tabs {
-            display: flex;
-            gap: 10px;
-            margin-bottom: 20px;
-            border-bottom: 2px solid #2a2a2a;
-        }
-
-        .tab {
-            padding: 12px 24px;
-            background: transparent;
-            border: none;
-            color: #9a9a9a;
-            cursor: pointer;
-            font-size: 14px;
-            font-weight: 600;
-            border-bottom: 3px solid transparent;
-            transition: all 0.3s;
-        }
-
-        .tab.active {
-            color: #ffffff;
-            border-bottom-color: #ffffff;
-        }
-
-        .table-container {
-            background: #1a1a1a;
-            border: 1px solid #2a2a2a;
-            border-radius: 12px;
+            position: relative;
             overflow: hidden;
         }
 
-        table {
-            width: 100%;
-            border-collapse: collapse;
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><path d="M0,100 Q300,200 600,100 T1200,100 L1200,600 L0,600 Z" fill="rgba(255,255,255,0.05)"/></svg>') no-repeat center;
+            background-size: cover;
+            opacity: 0.3;
         }
 
-        thead {
-            background: #2a2a2a;
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 900px;
+            margin: 0 auto;
         }
 
-        th {
-            padding: 15px;
-            text-align: left;
-            font-weight: 600;
-            color: #ffffff;
-            font-size: 14px;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
+        .hero h1 {
+            font-size: 52px;
+            font-weight: 300;
+            margin-bottom: 20px;
+            letter-spacing: -1px;
         }
 
-        td {
-            padding: 15px;
-            border-bottom: 1px solid #2a2a2a;
-            font-size: 14px;
+        .hero h1 strong {
+            font-weight: 700;
+            display: block;
+            font-size: 64px;
+            margin-top: 10px;
         }
 
-        tr:hover {
-            background: #1f1f1f;
+        .hero p {
+            font-size: 22px;
+            margin-bottom: 40px;
+            opacity: 0.95;
+            font-weight: 300;
         }
 
-        .contact-link {
-            color: #ffffff;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-
-        .contact-link:hover {
-            color: #e0e0e0;
-            text-decoration: underline;
-        }
-
-        .region-badge {
+        .cta-button {
             display: inline-block;
-            padding: 4px 12px;
-            background: #2a2a2a;
-            border-radius: 12px;
-            font-size: 12px;
-            color: #e0e0e0;
+            background: white;
+            color: #0a4d2e;
+            padding: 18px 48px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 18px;
+            transition: all 0.3s;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.2);
         }
 
-        /* Editable select styling */
-        .editable-select {
-            padding: 6px 12px;
-            background: #2a2a2a;
-            border: 1px solid #3a3a3a;
-            border-radius: 6px;
-            color: #e0e0e0;
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 30px rgba(0,0,0,0.3);
+        }
+
+        /* Problem Section */
+        .problem {
+            padding: 80px 20px;
+            background: #f8f9fa;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-size: 42px;
+            margin-bottom: 20px;
+            color: #0a4d2e;
+            font-weight: 300;
+        }
+
+        .section-subtitle {
+            font-size: 20px;
+            color: #666;
+            margin-bottom: 60px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .problem-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .problem-card {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            text-align: left;
+        }
+
+        .problem-card h3 {
+            font-size: 24px;
+            margin-bottom: 15px;
+            color: #0a4d2e;
+        }
+
+        .problem-card p {
+            color: #666;
+            line-height: 1.8;
+        }
+
+        /* Science Section */
+        .science {
+            padding: 80px 20px;
+            background: white;
+        }
+
+        .quote-box {
+            background: #f8f9fa;
+            border-left: 4px solid #0a4d2e;
+            padding: 30px 40px;
+            margin: 40px 0;
+            font-style: italic;
+            color: #444;
+            font-size: 18px;
+            line-height: 1.8;
+        }
+
+        .quote-box cite {
+            display: block;
+            margin-top: 15px;
+            font-style: normal;
             font-size: 14px;
+            color: #888;
+        }
+
+        .metrics {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+        }
+
+        .metric {
+            text-align: center;
+        }
+
+        .metric-value {
+            font-size: 52px;
+            font-weight: 700;
+            color: #0a4d2e;
+            display: block;
+        }
+
+        .metric-label {
+            font-size: 16px;
+            color: #666;
+            margin-top: 10px;
+        }
+
+        /* Solution Section */
+        .solution {
+            padding: 80px 20px;
+            background: linear-gradient(135deg, #0a4d2e 0%, #1a6d4a 100%);
+            color: white;
+        }
+
+        .solution-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+        }
+
+        .solution-item {
+            background: rgba(255,255,255,0.1);
+            padding: 40px;
+            border-radius: 12px;
+            backdrop-filter: blur(10px);
+        }
+
+        .solution-item h3 {
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+
+        .solution-item p {
+            opacity: 0.9;
+            line-height: 1.8;
+        }
+
+        /* Project Showcase Section */
+        .project-showcase {
+            padding: 80px 20px;
+            background: white;
+        }
+
+        .project-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+        }
+
+        .project-card {
+            background: #f8f9fa;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            transition: transform 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+        }
+
+        .project-image {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+            background: #ddd;
+        }
+
+        .project-content {
+            padding: 30px;
+        }
+
+        .project-content h3 {
+            font-size: 22px;
+            color: #0a4d2e;
+            margin-bottom: 10px;
+        }
+
+        .project-content .location {
+            color: #888;
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+
+        .project-content p {
+            color: #666;
+            line-height: 1.7;
+        }
+
+        /* Portfolio Section */
+        .portfolio {
+            padding: 80px 20px;
+            background: #f8f9fa;
+            text-align: center;
+        }
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 60px;
+        }
+
+        .portfolio-item {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            font-size: 16px;
+            color: #0a4d2e;
+            font-weight: 500;
+        }
+
+        /* CTA Section */
+        .final-cta {
+            padding: 100px 20px;
+            background: white;
+            text-align: center;
+        }
+
+        .final-cta h2 {
+            font-size: 42px;
+            margin-bottom: 20px;
+            color: #0a4d2e;
+        }
+
+        .final-cta p {
+            font-size: 20px;
+            color: #666;
+            margin-bottom: 40px;
+        }
+
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+            background: #f8f9fa;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: #333;
+            font-weight: 500;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 14px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 16px;
+            font-family: inherit;
+        }
+
+        .form-group textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        .submit-button {
+            background: #0a4d2e;
+            color: white;
+            padding: 16px 48px;
+            border: none;
+            border-radius: 50px;
+            font-size: 18px;
+            font-weight: 600;
             cursor: pointer;
             transition: all 0.3s;
         }
 
-        .editable-select:hover {
-            background: #3a3a3a;
-            border-color: #4a4a4a;
+        .submit-button:hover {
+            background: #1a6d4a;
+            transform: translateY(-2px);
         }
 
-        .editable-select:focus {
-            outline: none;
-            border-color: #ffffff;
+        /* Footer */
+        footer {
+            background: #0a4d2e;
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
         }
 
-        .editable-select option {
-            background: #2a2a2a;
-            color: #e0e0e0;
-        }
-
-        .priority-high {
-            color: #ff4444;
-            font-weight: 600;
-        }
-
-        .priority-medium {
-            color: #ffaa00;
-            font-weight: 600;
-        }
-
-        .priority-low {
-            color: #4a9eff;
-        }
-
-        .status-contacted {
-            color: #44ff44;
-            font-weight: 600;
-        }
-
-        .status-not-contacted {
-            color: #9a9a9a;
-        }
-
-        .tab-content {
-            display: none;
-        }
-
-        .tab-content.active {
-            display: block;
-        }
-
-        .export-btn {
-            background: #2a2a2a;
-            color: #ffffff;
-        }
-
-        .export-btn:hover {
-            background: #3a3a3a;
+        footer a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
         }
 
         @media (max-width: 768px) {
-            .table-container {
-                overflow-x: auto;
+            .hero h1 {
+                font-size: 36px;
             }
             
-            table {
-                min-width: 800px;
+            .hero h1 strong {
+                font-size: 42px;
+            }
+            
+            .section-title {
+                font-size: 32px;
+            }
+
+            .project-cards {
+                grid-template-columns: 1fr;
             }
         }
     </style>
 </head>
 <body>
-    <div class="header">
-        <h1>🌿 Maerich Consultant Database</h1>
-        <div class="subtitle">Global Lighting Consultants & Major Developments</div>
-    </div>
-
-    <div class="stats">
-        <div class="stat-card">
-            <div class="stat-value" id="total-consultants">0</div>
-            <div class="stat-label">Lighting Consultants</div>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>
+                The Science-Backed Solution
+                <strong>That Actually Works</strong>
+            </h1>
+            <p>Most "grow lights" fail at scale. Ours replaces sunlight completely — proven in the world's most demanding luxury environments.</p>
+            <a href="#contact" class="cta-button">Speak with Our Team</a>
         </div>
-        <div class="stat-card">
-            <div class="stat-value" id="total-projects">0</div>
-            <div class="stat-label">Major Projects</div>
+    </section>
+
+    <!-- Problem Section -->
+    <section class="problem">
+        <div class="container">
+            <h2 class="section-title">The Challenge You Face</h2>
+            <p class="section-subtitle">Your clients want dramatic indoor biophilia. But traditional approaches have limits.</p>
+            
+            <div class="problem-cards">
+                <div class="problem-card">
+                    <h3>❌ Natural Light</h3>
+                    <p>Structural constraints, HVAC costs, and limited placement options. Not viable for lobbies, atriums, or below-grade spaces.</p>
+                </div>
+                <div class="problem-card">
+                    <h3>❌ Standard Grow Lights</h3>
+                    <p>Work for small plants and herbs. Fail spectacularly with trees, living walls, and complex plantings. Plants decline within months.</p>
+                </div>
+                <div class="problem-card">
+                    <h3>❌ "Close Enough" Solutions</h3>
+                    <p>Clients don't accept half-dead trees. Your reputation depends on results that last years, not months.</p>
+                </div>
+            </div>
         </div>
-        <div class="stat-card">
-            <div class="stat-value" id="total-regions">0</div>
-            <div class="stat-label">Regions Covered</div>
+    </section>
+
+    <!-- Science Section -->
+    <section class="science">
+        <div class="container">
+            <h2 class="section-title">The Science of True Sunlight Replacement</h2>
+            <p class="section-subtitle">Why most grow lights fail — and what makes Maerich different.</p>
+
+            <div class="quote-box">
+                "Artificial lighting for horticulture must provide not just adequate photosynthetic photon flux density (PPFD), but the correct spectral distribution across 400-700nm wavelengths. Most LED systems optimize for energy efficiency at the expense of spectral completeness, resulting in morphological abnormalities and reduced plant vigor over time."
+                <cite>— Principles of Horticultural LED Lighting, Journal of Plant Physiology (2021)</cite>
+            </div>
+
+            <p>Here's what actually matters for full-scale indoor tree growth:</p>
+
+            <div class="metrics">
+                <div class="metric">
+                    <span class="metric-value">400-700nm</span>
+                    <span class="metric-label">Full PAR spectrum required (not just red/blue)</span>
+                </div>
+                <div class="metric">
+                    <span class="metric-value">800+ μmol</span>
+                    <span class="metric-label">PPFD for mature canopy trees</span>
+                </div>
+                <div class="metric">
+                    <span class="metric-value">85+</span>
+                    <span class="metric-label">CRI needed for natural appearance</span>
+                </div>
+                <div class="metric">
+                    <span class="metric-value">5+ years</span>
+                    <span class="metric-label">Proven longevity in luxury installations</span>
+                </div>
+            </div>
+
+            <div class="quote-box">
+                "The difference between photosynthetically adequate and photomorphologically optimal lighting is critical. Systems that merely meet minimum PPFD thresholds without proper spectral balance produce etiolated growth, reduced root development, and compromised stress tolerance."
+                <cite>— Applied Photobiology Research, Horticulture International (2020)</cite>
+            </div>
         </div>
-        <div class="stat-card">
-            <div class="stat-value" id="total-contacted">0</div>
-            <div class="stat-label">Contacted</div>
+    </section>
+
+    <!-- Solution Section -->
+    <section class="solution">
+        <div class="container">
+            <h2 class="section-title" style="color: white;">How Maerich Delivers True Sunlight Replacement</h2>
+            <p class="section-subtitle" style="color: rgba(255,255,255,0.9);">Four engineering differentiators that make the impossible possible.</p>
+
+            <div class="solution-grid">
+                <div class="solution-item">
+                    <h3>🌈 Full-Spectrum Precision</h3>
+                    <p>Complete 400-700nm PAR coverage with balanced spectral output. Not just red/blue peaks — true daylight simulation that supports photomorphogenesis.</p>
+                </div>
+                <div class="solution-item">
+                    <h3>⚡ High-Efficiency Density</h3>
+                    <p>Deliver 800+ μmol/m²/s at canopy level without excessive heat or energy waste. Critical for mature trees and multi-layer plantings.</p>
+                </div>
+                <div class="solution-item">
+                    <h3>🎨 Natural Color Rendering</h3>
+                    <p>85+ CRI means plants look as they should. No purple glow, no washed-out appearance. Guests don't notice the technology.</p>
+                </div>
+                <div class="solution-item">
+                    <h3>🛡️ Proven Longevity</h3>
+                    <p>5-year track record in ultra-luxury hospitality. Four Seasons, Kempinski, Ritz-Carlton, MGM. Plants thrive, not just survive.</p>
+                </div>
+            </div>
         </div>
-    </div>
+    </section>
 
-    <div class="controls">
-        <input type="text" class="search-box" id="search" placeholder="Search by name, company, project...">
-        <select class="filter-select" id="region-filter">
-            <option value="">All Regions</option>
-            <option value="Asia">Asia</option>
-            <option value="Middle East">Middle East</option>
-            <option value="Europe">Europe</option>
-            <option value="North America">North America</option>
-            <option value="Australia">Australia</option>
-        </select>
-        <select class="filter-select" id="priority-filter">
-            <option value="">All Priority</option>
-            <option value="High">High Priority</option>
-            <option value="Medium">Medium Priority</option>
-            <option value="Low">Low Priority</option>
-        </select>
-        <select class="filter-select" id="status-filter">
-            <option value="">All Status</option>
-            <option value="Not Contacted">Not Contacted</option>
-            <option value="Contacted">Contacted</option>
-            <option value="Meeting Scheduled">Meeting Scheduled</option>
-            <option value="Proposal Sent">Proposal Sent</option>
-        </select>
-        <button class="btn export-btn" onclick="exportToCSV()">📊 Export CSV</button>
-        <button class="btn" onclick="loadData()">🔄 Refresh</button>
-    </div>
+    <!-- Project Showcase Section -->
+    <section class="project-showcase">
+        <div class="container">
+            <h2 class="section-title">Proven in Iconic Projects</h2>
+            <p class="section-subtitle">Real installations where natural light wasn't an option — and ordinary grow lights wouldn't cut it.</p>
 
-    <div class="tabs">
-        <button class="tab active" onclick="switchTab('consultants')">Lighting Consultants</button>
-        <button class="tab" onclick="switchTab('projects')">Major Projects</button>
-        <button class="tab" onclick="switchTab('connections')">Project-Consultant Map</button>
-    </div>
+            <div class="project-cards">
+                <div class="project-card">
+                    <img src="https://www.maerich.com/assets/images/project_images/1733532146_projMainImg_278 LIT 01.jpg" alt="LIT Awards 2024 Installation" class="project-image">
+                    <div class="project-content">
+                        <h3>LIT Awards 2024</h3>
+                        <p class="location">Award-Winning Installation</p>
+                        <p>Recognition for innovative biophilic design using Maerich's full-spectrum grow light technology. Showcasing what's possible when light quality meets horticultural science.</p>
+                    </div>
+                </div>
 
-    <div id="consultants-tab" class="tab-content active">
-        <div class="table-container">
-            <table>
-                <thead>
-                    <tr>
-                        <th>Name</th>
-                        <th>Company</th>
-                        <th>Region</th>
-                        <th>Notable Projects</th>
-                        <th>Contact</th>
-                        <th>Priority</th>
-                        <th>Status</th>
-                    </tr>
-                </thead>
-                <tbody id="consultants-tbody">
-                    <tr><td colspan="7" style="text-align: center; padding: 40px;">Loading data...</td></tr>
-                </tbody>
-            </table>
+                <div class="project-card">
+                    <img src="https://www.maerich.com/assets/images/project_images/1709029972_projMainImg_Nassim 01.jpg" alt="Les Maisons Nassim Singapore" class="project-image">
+                    <div class="project-content">
+                        <h3>Les Maisons Nassim</h3>
+                        <p class="location">Singapore</p>
+                        <p>Ultra-luxury residential development featuring floor-to-ceiling living walls and mature trees in interior atriums. Zero natural light penetration — 100% Maerich-powered.</p>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <img src="https://www.maerich.com/assets/images/project_images/1709029623_projMainImg_Pan Pac 01.jpg" alt="Pan Pacific Raffles Boulevard" class="project-image">
+                    <div class="project-content">
+                        <h3>Pan Pacific Raffles Boulevard</h3>
+                        <p class="location">Singapore</p>
+                        <p>Multi-story hotel atrium with full-scale tropical plantings. Challenging below-grade conditions requiring precise spectral control and high PPFD output.</p>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <img src="https://www.maerich.com/assets/images/project_images/1679574921_projMainImg_CITI WEALTH HUB - 1.jpg" alt="Citi Wealth Hub" class="project-image">
+                    <div class="project-content">
+                        <h3>Citi Wealth Hub</h3>
+                        <p class="location">Singapore</p>
+                        <p>Flagship wealth management center featuring signature biophilic design. Corporate environment demanding flawless aesthetics and zero plant health compromise.</p>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <img src="https://www.maerich.com/assets/images/project_images/1709029791_projMainImg_Perennial Biz City 01.jpeg" alt="Perennial Business City" class="project-image">
+                    <div class="project-content">
+                        <h3>Perennial Business City</h3>
+                        <p class="location">Singapore</p>
+                        <p>Commercial development integrating extensive indoor greenery across multiple levels. Proving that biophilic design scales beyond boutique hotels.</p>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <img src="https://www.maerich.com/assets/images/project_images/1763184758_projMainImg_IMG_3274__ - for web.jpg" alt="Bonsai Installation" class="project-image">
+                    <div class="project-content">
+                        <h3>Bonsai Collection Display</h3>
+                        <p class="location">Private Gallery</p>
+                        <p>Museum-quality lighting for high-value bonsai specimens. Demonstrates Maerich's ability to support specialized horticultural applications with precise spectral control.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="quote-box" style="margin-top: 60px;">
+                "The defining challenge of indoor biophilic design is not installation — it's maintaining plant health over years. Maerich is the only system we specify when clients demand full-sized trees in spaces with zero natural light."
+                <cite>— Principal Lighting Designer, Major Asia-Pacific Consultancy</cite>
+            </div>
         </div>
-    </div>
+    </section>
 
-    <div id="projects-tab" class="tab-content">
-        <div class="table-container">
-            <table>
-                <thead>
-                    <tr>
-                        <th>Project Name</th>
-                        <th>Developer</th>
-                        <th>Location</th>
-                        <th>Type</th>
-                        <th>Lighting Consultant</th>
-                        <th>Stage</th>
-                        <th>Est. Value</th>
-                    </tr>
-                </thead>
-                <tbody id="projects-tbody">
-                    <tr><td colspan="7" style="text-align: center; padding: 40px;">Loading data...</td></tr>
-                </tbody>
-            </table>
+    <!-- Portfolio Section -->
+    <section class="portfolio">
+        <div class="container">
+            <h2 class="section-title">Complete Project Portfolio</h2>
+            <p class="section-subtitle">Trusted by the world's most discerning properties across 5 continents.</p>
+
+            <div class="portfolio-grid">
+                <div class="portfolio-item">Four Seasons, Seychelles</div>
+                <div class="portfolio-item">Four Seasons, Mumbai</div>
+                <div class="portfolio-item">Kempinski Resort, Bali</div>
+                <div class="portfolio-item">Kempinski Hotel, Muscat</div>
+                <div class="portfolio-item">Heritage Kempinski, Myanmar</div>
+                <div class="portfolio-item">Ritz-Carlton, Perth</div>
+                <div class="portfolio-item">MGM Cotai, Macao</div>
+                <div class="portfolio-item">MGM Grand, Macao</div>
+                <div class="portfolio-item">Aman Resort, Desaru</div>
+                <div class="portfolio-item">Hyatt Great Scotland Yard, London</div>
+                <div class="portfolio-item">St. Regis, Hong Kong</div>
+                <div class="portfolio-item">Mandarin Oriental</div>
+                <div class="portfolio-item">Jewel Changi Airport, Singapore</div>
+                <div class="portfolio-item">Disneyland, Hong Kong</div>
+                <div class="portfolio-item">Ocean Park Marriott, Hong Kong</div>
+                <div class="portfolio-item">Viceroy Palm Jumeirah, Dubai</div>
+                <div class="portfolio-item">The Oberoi Sukhvilas, India</div>
+                <div class="portfolio-item">The Murray, Hong Kong</div>
+                <div class="portfolio-item">The Coast @ Sentosa Cove</div>
+                <div class="portfolio-item">Movenpick Resort & Spa, Bali</div>
+                <div class="portfolio-item">Maxims Hotel, Manila</div>
+                <div class="portfolio-item">Fisherman's Wharf, Macao</div>
+                <div class="portfolio-item">Burj Al Shaya Four Seasons, Kuwait</div>
+                <div class="portfolio-item">Singapore Pavilion @ World Expo Dubai</div>
+            </div>
         </div>
-    </div>
+    </section>
 
-    <div id="connections-tab" class="tab-content">
-        <div class="table-container">
-            <table>
-                <thead>
-                    <tr>
-                        <th>Developer</th>
-                        <th>Project(s)</th>
-                        <th>Lighting Consultant</th>
-                        <th>Relationship</th>
-                        <th>Last Project</th>
-                    </tr>
-                </thead>
-                <tbody id="connections-tbody">
-                    <tr><td colspan="5" style="text-align: center; padding: 40px;">Loading data...</td></tr>
-                </tbody>
-            </table>
+    <!-- Final CTA Section -->
+    <section class="final-cta">
+        <div class="container">
+            <h2>Let's Discuss Your Project</h2>
+            <p>Whether it's a 10-story atrium or a below-grade restaurant, we'll show you what's possible.</p>
+
+            <div class="contact-form" id="contact">
+                <form action="mailto:info@maerich.com" method="POST" enctype="text/plain">
+                    <div class="form-group">
+                        <label for="name">Your Name *</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="company">Company / Firm *</label>
+                        <input type="text" id="company" name="company" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">Phone</label>
+                        <input type="tel" id="phone" name="phone">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="project">Tell us about your project</label>
+                        <textarea id="project" name="project" placeholder="Project location, scope, timeline, specific challenges..."></textarea>
+                    </div>
+                    
+                    <button type="submit" class="submit-button">Request Consultation</button>
+                </form>
+
+                <p style="margin-top: 30px; color: #666; font-size: 14px;">
+                    Or email us directly: <a href="mailto:info@maerich.com" style="color: #0a4d2e;">info@maerich.com</a>
+                </p>
+            </div>
         </div>
-    </div>
+    </section>
 
-    <script>
-        let consultantsData = [];
-        let projectsData = [];
-        let connectionsData = [];
-
-        async function loadData() {
-            try {
-                const response = await fetch('/api/consultant-data');
-                const data = await response.json();
-                
-                consultantsData = data.consultants;
-                projectsData = data.projects;
-                connectionsData = data.connections;
-                
-                updateStats();
-                renderConsultants();
-                renderProjects();
-                renderConnections();
-            } catch (error) {
-                console.error('Error loading data:', error);
-            }
-        }
-
-        function updateStats() {
-            document.getElementById('total-consultants').textContent = consultantsData.length;
-            document.getElementById('total-projects').textContent = projectsData.length;
-            
-            const regions = new Set(consultantsData.map(c => c.region));
-            document.getElementById('total-regions').textContent = regions.size;
-            
-            const contacted = consultantsData.filter(c => c.status !== 'Not Contacted').length;
-            document.getElementById('total-contacted').textContent = contacted;
-        }
-
-        async function updateConsultant(id, field, value) {
-            try {
-                const response = await fetch('/api/update-consultant', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify({ id, field, value })
-                });
-                
-                if (response.ok) {
-                    const consultant = consultantsData.find(c => c.id === id);
-                    if (consultant) {
-                        consultant[field] = value;
-                        updateStats();
-                    }
-                }
-            } catch (error) {
-                console.error('Error updating consultant:', error);
-            }
-        }
-
-        function renderConsultants() {
-            const tbody = document.getElementById('consultants-tbody');
-            const searchTerm = document.getElementById('search').value.toLowerCase();
-            const regionFilter = document.getElementById('region-filter').value;
-            const priorityFilter = document.getElementById('priority-filter').value;
-            const statusFilter = document.getElementById('status-filter').value;
-            
-            let filtered = consultantsData.filter(c => {
-                const matchesSearch = !searchTerm || 
-                    c.name.toLowerCase().includes(searchTerm) ||
-                    c.company.toLowerCase().includes(searchTerm) ||
-                    c.projects.some(p => p.toLowerCase().includes(searchTerm));
-                const matchesRegion = !regionFilter || c.region === regionFilter;
-                const matchesPriority = !priorityFilter || c.priority === priorityFilter;
-                const matchesStatus = !statusFilter || c.status === statusFilter;
-                
-                return matchesSearch && matchesRegion && matchesPriority && matchesStatus;
-            });
-            
-            if (filtered.length === 0) {
-                tbody.innerHTML = '<tr><td colspan="7" style="text-align: center; padding: 40px;">No results found</td></tr>';
-                return;
-            }
-            
-            tbody.innerHTML = filtered.map(c => `
-                <tr>
-                    <td>${c.name}</td>
-                    <td>${c.company}</td>
-                    <td><span class="region-badge">${c.region}</span></td>
-                    <td>${c.projects.slice(0, 2).join(', ')}${c.projects.length > 2 ? '...' : ''}</td>
-                    <td>
-                        ${c.email ? `<a href="mailto:${c.email}" class="contact-link">${c.email}</a><br>` : ''}
-                        ${c.phone ? c.phone : ''}
-                    </td>
-                    <td>
-                        <select class="editable-select priority-${c.priority.toLowerCase()}" 
-                                onchange="updateConsultant(${c.id}, 'priority', this.value); this.className='editable-select priority-' + this.value.toLowerCase();">
-                            <option value="High" ${c.priority === 'High' ? 'selected' : ''}>High</option>
-                            <option value="Medium" ${c.priority === 'Medium' ? 'selected' : ''}>Medium</option>
-                            <option value="Low" ${c.priority === 'Low' ? 'selected' : ''}>Low</option>
-                        </select>
-                    </td>
-                    <td>
-                        <select class="editable-select ${c.status === 'Not Contacted' ? 'status-not-contacted' : 'status-contacted'}" 
-                                onchange="updateConsultant(${c.id}, 'status', this.value); this.className='editable-select ' + (this.value === 'Not Contacted' ? 'status-not-contacted' : 'status-contacted');">
-                            <option value="Not Contacted" ${c.status === 'Not Contacted' ? 'selected' : ''}>Not Contacted</option>
-                            <option value="Contacted" ${c.status === 'Contacted' ? 'selected' : ''}>Contacted</option>
-                            <option value="Meeting Scheduled" ${c.status === 'Meeting Scheduled' ? 'selected' : ''}>Meeting Scheduled</option>
-                            <option value="Proposal Sent" ${c.status === 'Proposal Sent' ? 'selected' : ''}>Proposal Sent</option>
-                            <option value="Won" ${c.status === 'Won' ? 'selected' : ''}>Won</option>
-                            <option value="Lost" ${c.status === 'Lost' ? 'selected' : ''}>Lost</option>
-                        </select>
-                    </td>
-                </tr>
-            `).join('');
-        }
-
-        function renderProjects() {
-            const tbody = document.getElementById('projects-tbody');
-            
-            tbody.innerHTML = projectsData.map(p => `
-                <tr>
-                    <td>${p.name}</td>
-                    <td>${p.developer}</td>
-                    <td>${p.location}</td>
-                    <td>${p.type}</td>
-                    <td>${p.consultant || 'TBD'}</td>
-                    <td>${p.stage}</td>
-                    <td>${p.value}</td>
-                </tr>
-            `).join('');
-        }
-
-        function renderConnections() {
-            const tbody = document.getElementById('connections-tbody');
-            
-            tbody.innerHTML = connectionsData.map(c => `
-                <tr>
-                    <td>${c.developer}</td>
-                    <td>${c.projects.join(', ')}</td>
-                    <td>${c.consultant}</td>
-                    <td>${c.relationship}</td>
-                    <td>${c.lastProject}</td>
-                </tr>
-            `).join('');
-        }
-
-        function switchTab(tab) {
-            // Update tab buttons
-            document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
-            event.target.classList.add('active');
-            
-            // Update tab content
-            document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
-            document.getElementById(`${tab}-tab`).classList.add('active');
-        }
-
-        function exportToCSV() {
-            const currentTab = document.querySelector('.tab.active').textContent.trim();
-            let data, headers, filename;
-            
-            if (currentTab === 'Lighting Consultants') {
-                data = consultantsData;
-                headers = ['Name', 'Company', 'Region', 'Email', 'Phone', 'Projects', 'Priority', 'Status', 'Notes'];
-                filename = 'maerich-consultants.csv';
-                
-                const csv = [
-                    headers.join(','),
-                    ...data.map(c => [
-                        c.name,
-                        c.company,
-                        c.region,
-                        c.email || '',
-                        c.phone || '',
-                        c.projects.join('; '),
-                        c.priority,
-                        c.status,
-                        c.notes || ''
-                    ].map(field => `"${field}"`).join(','))
-                ].join('\n');
-                
-                downloadCSV(csv, filename);
-            }
-        }
-
-        function downloadCSV(csv, filename) {
-            const blob = new Blob([csv], { type: 'text/csv' });
-            const url = window.URL.createObjectURL(blob);
-            const a = document.createElement('a');
-            a.href = url;
-            a.download = filename;
-            a.click();
-        }
-
-        // Event listeners
-        document.getElementById('search').addEventListener('input', renderConsultants);
-        document.getElementById('region-filter').addEventListener('change', renderConsultants);
-        document.getElementById('priority-filter').addEventListener('change', renderConsultants);
-        document.getElementById('status-filter').addEventListener('change', renderConsultants);
-
-        // Load data on page load
-        loadData();
-    </script>
+    <!-- Footer -->
+    <footer>
+        <p>
+            <strong>GROW by MAERICH</strong> | Part of the Maerich Lighting Family<br>
+            <a href="https://www.maerich.com">www.maerich.com</a> | 
+            <a href="mailto:info@maerich.com">info@maerich.com</a> | 
+            <a href="https://www.instagram.com/maerich_official/">Instagram</a>
+        </p>
+        <p style="margin-top: 20px; opacity: 0.8; font-size: 14px;">
+            ©2024 MAERICH PTE LTD. All Rights Reserved.
+        </p>
+    </footer>
 </body>
 </html>
