@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: maerich-consultant-database
+    env: node
+    plan: free
+    buildCommand: npm install
+    startCommand: node server.js
+    envVars:
+      - key: NODE_ENV
+        value: production
